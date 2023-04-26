@@ -37,7 +37,7 @@ namespace project
         {
 
         }
-
+        //Change la couleur des boutons choisis par l'ordinateur et le retire de la liste disponible pour le joueur et vérifie si l'ordi a gagné//
         private void CPUMove(object sender, EventArgs e)
         {
             if (buttons.Count > 0)
@@ -52,7 +52,7 @@ namespace project
                 CPUTimer.Stop();
             }
         }
-
+        //Change la couleur des boutons choisis et le retire de la liste disponible pour l'ordinateur et vérifie si le joueur a gagné//
         private void PlayerClickButton(object sender, EventArgs e)
         {
             var button = (Button)sender;
@@ -65,11 +65,12 @@ namespace project
             CPUTimer.Start();
 
         }
-
+        
         private void RestartGame(object sender, EventArgs e)
         {
             Reset();
         }
+        // Vérifie si l'ordinateur ou le jouer a reussi a avoir 3 marques en ligne droite ou diagonales//
         private void Checkgame()
         {
             if (button1.Text == "X" && button2.Text == "X" && button3.Text == "X"
